@@ -13,7 +13,7 @@ use DSchoenbauer\Exception\Platform\InvalidArgumentException;
  */
 class Conflict extends InvalidArgumentException implements HttpExceptionInterface {
 
-    public function __construct($reasonForError) {
+    public function __construct($reasonForError = "") {
         parent::__construct($reasonForError, 409);
     }
 

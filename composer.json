@@ -7,7 +7,7 @@
             "email": "d.schoenbauer@ctimeetingtech.com"
         }
     ],
-        "require": {
+    "require": {
         "php": ">=5.6.0"
     },
     "require-dev": {
@@ -17,6 +17,11 @@
     "autoload": {
         "psr-4": {
             "DSchoenbauer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DSchoenbauer\\Tests\\": "tests/src/"
         }
     },
     "scripts": {
