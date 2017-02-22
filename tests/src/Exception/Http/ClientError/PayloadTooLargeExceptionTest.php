@@ -23,6 +23,17 @@ class PayloadTooLargeExceptionTest extends \DSchoenbauer\Tests\Exception\Http\Ab
         ->setErrorNumber(413);
 
     }
+    
+    public function testPayloadTooLargeMaxSize(){
+        $maxPayloadSize = "5mb";
+        $this->assertEquals($maxPayloadSize,$this->object->setMaxPayloadSize($maxPayloadSize)->getMaxPayloadSize());
+    }
+    
+    public function testPayloadTooLargeMaxSizeConstruct(){
+        $maxPayloadSize = "10mb";
+        $e = new PayloadTooLargeException($maxPayloadSize);
+        $this->assertEquals($maxPayloadSize,$e->getMaxPayloadSize());
+    }
 
     /**
      * Tears down the fixture, for example, closes a network connection.
