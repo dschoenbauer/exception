@@ -22,6 +22,17 @@ class UnsupportedMediaTypeTest extends \DSchoenbauer\Tests\Exception\Http\Abstra
         ->setParentClass(ClientErrorException::class)
         ->setErrorNumber(415);
     }
+    
+    public function testSupportedMediaTypes(){
+        $mediaTypes = ['doc','docx'];
+        $this->assertEquals($mediaTypes, $this->object->setSupportedMediaTypes($mediaTypes)->getSupportedMediaTypes());
+    }
+    
+    public function testSupportedMediaTypesThroughConstruct(){
+        $mediaTypes = ['doc','docx','pdf'];
+        $exc = new UnsupportedMediaType($mediaTypes);
+        $this->assertEquals($mediaTypes, $exc->setSupportedMediaTypes($mediaTypes)->getSupportedMediaTypes());
+    }
 
     /**
      * Tears down the fixture, for example, closes a network connection.
