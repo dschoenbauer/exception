@@ -1,15 +1,13 @@
 <?php
 
-namespace DSchoenbauer\Exception\Http;
-
-use DSchoenbauer\Exception\Platform\RuntimeException;
+namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
  * Error code response for missing or invalid authentication token.
  *
  * @author David
  */
-class UnauthorizedException extends RuntimeException implements HttpExceptionInterface {
+class UnauthorizedException extends \DSchoenbauer\Exception\Http\ClientError\ClientErrorException{
 
     public function __construct($message = "") {
         parent::__construct($message, 401);
