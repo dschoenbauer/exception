@@ -38,8 +38,35 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  * @since 1.0.0
  */
 class UnsupportedMediaType extends ClientErrorException {
-    public function __construct($message = "") {
-        parent::__construct($message, 415);
-    }
     
+    private $_supportedMediaTypes = [];
+    
+    /**
+     * @param mixed $supportedMediaTypes a list of supported media types to give 
+     * the client a clue as to what is expected
+     * @param string $message a message from the offending section of code
+     */
+    public function __construct($supportedMediaTypes = null, $message = "") {
+        parent::__construct($message, 415);
+        $this->setSupportedMediaTypes($supportedMediaTypes);
+    }
+ 
+    
+    /**
+     * @return mixed a list of supported media types
+     */
+    public function getSupportedMediaTypes() {
+        return $this->_supportedMediaTypes;
+    }
+
+    /**
+     * @param mixed $supportedMediaTypes a list of media types supported
+     * @return $this
+     */
+    public function setSupportedMediaTypes($supportedMediaTypes) {
+        $this->_supportedMediaTypes = $supportedMediaTypes;
+        return $this;
+    }
+
+
 }
