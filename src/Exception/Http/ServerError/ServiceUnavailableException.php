@@ -27,19 +27,12 @@
 namespace DSchoenbauer\Exception\Http\ServerError;
 
 /**
- * Description of ClientErrorExceptionTest
+ * Description of ServiceUnavailableException
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
-class ServerErrorExceptionTest extends \DSchoenbauer\Tests\Exception\Http\AbstractHttpException {
-
-    protected $object;
-
-    protected function setUp() {
-        $this->object = new ServerErrorException();
-        $this->setCommonInterface(\DSchoenbauer\Exception\Http\HttpExceptionInterface::class)
-                ->setParentClass(\DSchoenbauer\Exception\Platform\RuntimeException::class)
-                ->setErrorNumber(0);
+class ServiceUnavailableException extends ServerErrorException {
+    public function __construct($message = "") {
+        parent::__construct($message, 503);
     }
-
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace DSchoenbauer\Exception\Http\ClientError;
+namespace DSchoenbauer\Exception\Http\ServerError;
 
 use DSchoenbauer\Exception\Http\ServerError\ServerErrorException;
 
