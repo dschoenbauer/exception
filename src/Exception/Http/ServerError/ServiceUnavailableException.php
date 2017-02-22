@@ -27,7 +27,18 @@
 namespace DSchoenbauer\Exception\Http\ServerError;
 
 /**
- * Description of ServiceUnavailableException
+ * The server is currently unable to handle the request due to a temporary 
+ * overload or scheduled maintenance, which will likely be alleviated after 
+ * some delay.
+ * 
+ * The server MAY send a Retry-After header field1 to suggest an appropriate 
+ * amount of time for the client to wait before retrying the request.
+ * 
+ * Note: The existence of the 503 status code does not imply that a server 
+ * has to use it when becoming overloaded. Some servers might simply refuse the 
+ * connection.
+ * 
+ * @link https://httpstatuses.com/503 Source
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */

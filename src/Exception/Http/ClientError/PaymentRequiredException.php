@@ -2,11 +2,10 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
-use DSchoenbauer\Exception\Platform\RuntimeException;
-
 
 /**
- * 
+ * Reserved for future use.
+ * @link https://httpstatuses.com/402 Source
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */

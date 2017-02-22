@@ -1,13 +1,23 @@
 <?php
 
-use DSchoenbauer\Exception\Http\HttpExceptionInterface;
-use DSchoenbauer\Exception\Platform\RuntimeException;
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
- * The server understood the request, but is refusing to fulfill it. Authorization will not help and the request SHOULD NOT be repeated. If the request method was not HEAD and the server wishes to make public why the request has not been fulfilled, it SHOULD describe the reason for the refusal in the entity. If the server does not wish to make this information available to the client, the status code 404 (Not Found) can be used instead.
- *
+ * The server understood the request but refuses to authorize it.
+ * 
+ * A server that wishes to make public why the request has been forbidden can 
+ * describe that reason in the response payload (if any).
+ * 
+ * If authentication credentials were provided in the request, the server 
+ * considers them insufficient to grant access. The client SHOULD NOT 
+ * automatically repeat the request with the same credentials. The client MAY 
+ * repeat the request with new or different credentials. However, a request 
+ * might be forbidden for reasons unrelated to the credentials.
+ * 
+ * An origin server that wishes to "hide" the current existence of a forbidden 
+ * target resource MAY instead respond with a status code of 404 Not Found.
+ * 
+ * @link https://httpstatuses.com/403 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class ForbiddenException extends ClientErrorException {

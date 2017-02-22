@@ -5,7 +5,9 @@ namespace DSchoenbauer\Exception\Http\ServerError;
 use DSchoenbauer\Exception\Http\ServerError\ServerErrorException;
 
 /**
- * The server encountered an unexpected condition which prevented it from fulfilling the request.
+ * The server encountered an unexpected condition which prevented it from 
+ * fulfilling the request.
+ * @link https://httpstatuses.com/500 Source
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */

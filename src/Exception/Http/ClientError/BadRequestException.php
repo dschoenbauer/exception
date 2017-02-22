@@ -3,8 +3,10 @@
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
- * The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.
- *
+ * The server cannot or will not process the request due to something that is 
+ * perceived to be a client error (e.g., malformed request syntax, invalid 
+ * request message framing, or deceptive request routing).
+ * @link https://httpstatuses.com/400 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class BadRequestException extends ClientErrorException {
