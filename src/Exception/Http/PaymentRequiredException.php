@@ -8,9 +8,9 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
 /**
  * 
  *
- * @author David Schoenbauer <d.schoenbauer@ctimeetingtech.com>
+ * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
-class PaymentRequired extends RuntimeException implements HttpExceptionInterface {
+class PaymentRequiredException extends RuntimeException implements HttpExceptionInterface {
 
     public function __construct($message = "") {
         parent::__construct($message, 402);

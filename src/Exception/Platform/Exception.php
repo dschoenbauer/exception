@@ -8,7 +8,7 @@ use Exception as Exc;
 /**
  * Exception is the base class for all Exceptions
  *
- * @author David Schoenbauer <d.schoenbauer@ctimeetingtech.com>
+ * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class Exception extends Exc implements ExceptionInterface {
     

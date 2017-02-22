@@ -11,7 +11,7 @@ use UnexpectedValueException as UnexpectedValue;
  * return value to be of a certain type or value not including arithmetic or 
  * buffer related errors.
  *
- * @author David Schoenbauer <d.schoenbauer@ctimeetingtech.com>
+ * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class UnexpectedValueException extends UnexpectedValue implements ExceptionInterface {
     

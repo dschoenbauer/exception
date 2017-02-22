@@ -11,7 +11,7 @@ use DSchoenbauer\Exception\Platform\InvalidArgumentException;
  *
  * @author David
  */
-class Conflict extends InvalidArgumentException implements HttpExceptionInterface {
+class ConflictException extends InvalidArgumentException implements HttpExceptionInterface {
 
     public function __construct($reasonForError = "") {
         parent::__construct($reasonForError, 409);

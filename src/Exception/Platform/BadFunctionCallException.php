@@ -8,7 +8,7 @@ use DSchoenbauer\Exception\ExceptionInterface;
 /**
  * Exception thrown if a callback refers to an undefined function or if some arguments are missing.
  *
- * @author David Schoenbauer <d.schoenbauer@ctimeetingtech.com>
+ * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class BadFunctionCallException extends BadFunctionCall implements ExceptionInterface {
     

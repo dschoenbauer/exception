@@ -8,7 +8,7 @@ use OverflowException as Overflow;
 /**
  * Exception thrown when adding an element to a full container.
  *
- * @author David Schoenbauer <d.schoenbauer@ctimeetingtech.com>
+ * @author David Schoenbauer <dschoenbauer@gmail.com>
  */
 class OverflowException extends Overflow implements ExceptionInterface {
     

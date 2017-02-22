@@ -9,7 +9,7 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  *
  * @author David
  */
-class Unauthorized extends RuntimeException implements HttpExceptionInterface {
+class UnauthorizedException extends RuntimeException implements HttpExceptionInterface {
 
     public function __construct($message = "") {
         parent::__construct($message, 401);
