@@ -31,7 +31,7 @@ class UnsupportedMediaTypeTest extends \DSchoenbauer\Tests\Exception\Http\Abstra
     public function testSupportedMediaTypesThroughConstruct(){
         $mediaTypes = ['doc','docx','pdf'];
         $exc = new UnsupportedMediaType($mediaTypes);
-        $this->assertEquals($mediaTypes, $exc->setSupportedMediaTypes($mediaTypes)->getSupportedMediaTypes());
+        $this->assertEquals($mediaTypes, $exc->getSupportedMediaTypes());
     }
 
     /**
