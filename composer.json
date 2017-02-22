@@ -1,6 +1,6 @@
 {
-    "name": "dschoenbauer/file-upload",
-    "description": "Description of project file-upload.",
+    "name": "dschoenbauer/exception",
+    "description": "A base set of exceptions for my projects",
     "authors": [
         {
             "name": "David Schoenbauer",
