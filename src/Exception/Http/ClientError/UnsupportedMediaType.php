@@ -27,25 +27,18 @@
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
- * The server is refusing to process a request because the request payload is 
- * larger than the server is willing or able to process.
+ * The origin server is refusing to service the request because the payload is 
+ * in a format not supported by this method on the target resource.
  * 
- * The server MAY close the connection to prevent the client from continuing 
- * the request.
- * 
- * If the condition is temporary, the server SHOULD generate a Retry-After 
- * header field to indicate that it is temporary and after what time the client 
- * MAY try again.
+ * The format problem might be due to the requests indicated Content-Type or 
+ * Content-Encoding, or as a result of inspecting the data directly.
  *
- * @link https://httpstatuses.com/413 Source
+ * @link https://httpstatuses.com/415 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
- * @todo provide a method to define a ret-after time
- * @todo provide method to define max size
  */
-class PayloadTooLargeException extends ClientErrorException {
-
+class UnsupportedMediaType extends ClientErrorException {
     public function __construct($message = "") {
-        parent::__construct($message, 413);
+        parent::__construct($message, 415);
     }
-
+    
 }
