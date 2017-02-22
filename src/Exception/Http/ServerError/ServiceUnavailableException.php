@@ -41,6 +41,7 @@ namespace DSchoenbauer\Exception\Http\ServerError;
  * @link https://httpstatuses.com/503 Source
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
+ * @since 1.0.0
  */
 class ServiceUnavailableException extends ServerErrorException {
     public function __construct($message = "") {

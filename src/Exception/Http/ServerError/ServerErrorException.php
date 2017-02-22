@@ -31,9 +31,10 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
 
 
 /**
- * Description of ClientErrorException
+ * A base runtime application exception indicating a server error (HTTP 5xx status codes).
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
+ * @since 1.0.0
  */
 class ServerErrorException extends RuntimeException implements HttpExceptionInterface {
 }

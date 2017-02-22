@@ -30,9 +30,10 @@ use DSchoenbauer\Exception\Http\HttpExceptionInterface;
 use DSchoenbauer\Exception\Platform\RuntimeException;
 
 /**
- * Description of ClientErrorException
+ * A base runtime application exception indicating a client request error (HTTP 4xx status codes).
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
+ * @since 1.0.0
  */
 class ClientErrorException extends RuntimeException implements HttpExceptionInterface {
 }

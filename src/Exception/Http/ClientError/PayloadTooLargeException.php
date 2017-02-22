@@ -39,6 +39,7 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  *
  * @link https://httpstatuses.com/413 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
+ * @since 1.0.0
  * @todo provide a method to define a ret-after time
  * @todo provide method to define max size
  */

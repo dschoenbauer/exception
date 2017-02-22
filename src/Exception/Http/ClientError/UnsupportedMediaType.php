@@ -35,6 +35,7 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  *
  * @link https://httpstatuses.com/415 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
+ * @since 1.0.0
  */
 class UnsupportedMediaType extends ClientErrorException {
     public function __construct($message = "") {
