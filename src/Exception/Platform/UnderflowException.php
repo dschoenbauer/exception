@@ -30,12 +30,13 @@ use DSchoenbauer\Exception\ExceptionInterface;
 use UnderflowException as Underflow;
 
 /**
- * Exception thrown when performing an invalid operation on an empty container, 
+ * Exception thrown when performing an invalid operation on an empty container,
  * such as removing an element.
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class UnderflowException extends Underflow implements ExceptionInterface {
+class UnderflowException extends Underflow implements ExceptionInterface
+{
     
 }

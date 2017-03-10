@@ -27,19 +27,20 @@
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
- * The origin server is refusing to service the request because the payload is 
+ * The origin server is refusing to service the request because the payload is
  * in a format not supported by this method on the target resource.
- * 
- * The format problem might be due to the requests indicated Content-Type or 
+ *
+ * The format problem might be due to the requests indicated Content-Type or
  * Content-Encoding, or as a result of inspecting the data directly.
  *
  * @link https://httpstatuses.com/415 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class UnsupportedMediaType extends ClientErrorException {
-    public function __construct($message = "") {
+class UnsupportedMediaType extends ClientErrorException
+{
+    public function __construct($message = "")
+    {
         parent::__construct($message, 415);
     }
-    
 }
