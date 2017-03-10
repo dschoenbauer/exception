@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
@@ -39,8 +37,35 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  */
 class UnsupportedMediaType extends ClientErrorException
 {
-    public function __construct($message = "")
+
+    private $supportedMediaTypes = [];
+
+    /**
+     * @param mixed $supportedMediaTypes a list of supported media types to give
+     * the client a clue as to what is expected
+     * @param string $message a message from the offending section of code
+     */
+    public function __construct(array $supportedMediaTypes = [], $message = "")
     {
         parent::__construct($message, 415);
+        $this->setSupportedMediaTypes($supportedMediaTypes);
+    }
+
+    /**
+     * @return mixed a list of supported media types
+     */
+    public function getSupportedMediaTypes()
+    {
+        return $this->supportedMediaTypes;
+    }
+
+    /**
+     * @param array $supportedMediaTypes a list of media types supported
+     * @return $this
+     */
+    public function setSupportedMediaTypes(array $supportedMediaTypes)
+    {
+        $this->supportedMediaTypes = $supportedMediaTypes;
+        return $this;
     }
 }

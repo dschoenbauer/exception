@@ -46,8 +46,30 @@ namespace DSchoenbauer\Exception\Http\ClientError;
 class PayloadTooLargeException extends ClientErrorException
 {
 
-    public function __construct($message = "")
+    private $maxPayloadSize = 0;
+
+
+    public function __construct($maxPayloadSize = 0, $message = "")
     {
         parent::__construct($message, 413);
+        $this->setMaxPayloadSize($maxPayloadSize);
+    }
+
+    /**
+     * @return mixed representation of max payload size
+     */
+    public function getMaxPayloadSize()
+    {
+        return $this->maxPayloadSize;
+    }
+
+    /**
+     * @param type $maxPayloadSize representation of max payload size
+     * @return $this
+     */
+    public function setMaxPayloadSize($maxPayloadSize)
+    {
+        $this->maxPayloadSize = $maxPayloadSize;
+        return $this;
     }
 }
