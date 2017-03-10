@@ -35,6 +35,7 @@ use OverflowException as Overflow;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class OverflowException extends Overflow implements ExceptionInterface {
+class OverflowException extends Overflow implements ExceptionInterface
+{
     
 }

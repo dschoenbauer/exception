@@ -35,6 +35,7 @@ use OutOfBoundsException as OutOfBounds;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class OutOfBoundsException extends OutOfBounds implements ExceptionInterface {
+class OutOfBoundsException extends OutOfBounds implements ExceptionInterface
+{
     
 }

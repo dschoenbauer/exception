@@ -35,6 +35,7 @@ use InvalidArgumentException as InvalidArgument;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class InvalidArgumentException extends InvalidArgument implements ExceptionInterface {
+class InvalidArgumentException extends InvalidArgument implements ExceptionInterface
+{
     
 }
