@@ -36,7 +36,6 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  * @link https://httpstatuses.com/426 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
- * @todo Add a way to define the upgrade header
  */
 class UpgradeRequiredException extends ClientErrorException
 {

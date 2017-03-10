@@ -41,7 +41,6 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  * @link https://httpstatuses.com/405 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
- * @todo define a away to provide the allowed methods
  */
 class NotAllowedException extends ClientErrorException
 {
