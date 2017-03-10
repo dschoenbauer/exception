@@ -56,7 +56,7 @@ class PayloadTooLargeException extends ClientErrorException
     }
 
     /**
-     * @return mixed representation of max payload size
+     * @return integer representation of max payload size
      */
     public function getMaxPayloadSize()
     {
@@ -64,7 +64,7 @@ class PayloadTooLargeException extends ClientErrorException
     }
 
     /**
-     * @param type $maxPayloadSize representation of max payload size
+     * @param integer $maxPayloadSize representation of max payload size
      * @return $this
      */
     public function setMaxPayloadSize($maxPayloadSize)
