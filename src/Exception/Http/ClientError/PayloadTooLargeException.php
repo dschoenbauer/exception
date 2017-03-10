@@ -27,44 +27,50 @@
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
- * The server is refusing to process a request because the request payload is 
+ * The server is refusing to process a request because the request payload is
  * larger than the server is willing or able to process.
- * 
- * The server MAY close the connection to prevent the client from continuing 
+ *
+ * The server MAY close the connection to prevent the client from continuing
  * the request.
- * 
- * If the condition is temporary, the server SHOULD generate a Retry-After 
- * header field to indicate that it is temporary and after what time the client 
+ *
+ * If the condition is temporary, the server SHOULD generate a Retry-After
+ * header field to indicate that it is temporary and after what time the client
  * MAY try again.
  *
  * @link https://httpstatuses.com/413 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
- * @todo provide a method to define a ret-after time
- * @todo provide method to define max size
  */
-class PayloadTooLargeException extends ClientErrorException {
+class PayloadTooLargeException extends ClientErrorException
+{
 
     private $maxPayloadSize = 0;
 
 
-    public function __construct($maxPayloadSize = 0, $message = "") {
+
+    public function __construct($maxPayloadSize = 0, $message = "")
+    {
+
         parent::__construct($message, 413);
         $this->setMaxPayloadSize($maxPayloadSize);
     }
 
     /**
-     * @return mixed representation of max payload size
+
+     * @return integer representation of max payload size
      */
-    public function getMaxPayloadSize() {
+    public function getMaxPayloadSize()
+    {
         return $this->maxPayloadSize;
     }
 
     /**
-     * @param type $maxPayloadSize representation of max payload size
+
+     * @param integer $maxPayloadSize representation of max payload size
      * @return $this
      */
-    public function setMaxPayloadSize($maxPayloadSize) {
+    public function setMaxPayloadSize($maxPayloadSize)
+    {
         $this->maxPayloadSize = $maxPayloadSize;
         return $this;
     }

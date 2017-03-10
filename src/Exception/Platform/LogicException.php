@@ -36,6 +36,7 @@ use LogicException as Logic;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class LogicException extends Logic implements ExceptionInterface {
+class LogicException extends Logic implements ExceptionInterface
+{
 
 }

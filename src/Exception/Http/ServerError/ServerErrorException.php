@@ -29,12 +29,12 @@ namespace DSchoenbauer\Exception\Http\ServerError;
 use DSchoenbauer\Exception\Http\HttpExceptionInterface;
 use DSchoenbauer\Exception\Platform\RuntimeException;
 
-
 /**
  * A base runtime application exception indicating a server error (HTTP 5xx status codes).
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class ServerErrorException extends RuntimeException implements HttpExceptionInterface {
+class ServerErrorException extends RuntimeException implements HttpExceptionInterface
+{
 }

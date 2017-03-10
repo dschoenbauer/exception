@@ -35,5 +35,6 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class ClientErrorException extends RuntimeException implements HttpExceptionInterface {
+class ClientErrorException extends RuntimeException implements HttpExceptionInterface
+{
 }

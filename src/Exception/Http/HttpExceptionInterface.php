@@ -31,6 +31,7 @@ namespace DSchoenbauer\Exception\Http;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-interface HttpExceptionInterface {
+interface HttpExceptionInterface
+{
     
 }

@@ -35,6 +35,7 @@ use RuntimeException as Runtime;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class RuntimeException extends Runtime implements ExceptionInterface {
+class RuntimeException extends Runtime implements ExceptionInterface
+{
     
 }

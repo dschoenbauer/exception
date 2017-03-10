@@ -35,6 +35,7 @@ use LengthException as Length;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class LengthException extends Length implements ExceptionInterface {
+class LengthException extends Length implements ExceptionInterface
+{
     
 }

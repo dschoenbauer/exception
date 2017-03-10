@@ -35,6 +35,7 @@ use DSchoenbauer\Exception\ExceptionInterface;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class BadMethodCallException extends BadMethodCall implements ExceptionInterface {
+class BadMethodCallException extends BadMethodCall implements ExceptionInterface
+{
     
 }
