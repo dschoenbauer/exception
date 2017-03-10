@@ -47,13 +47,16 @@ class PayloadTooLargeException extends ClientErrorException
     private $maxPayloadSize = 0;
 
 
+
     public function __construct($maxPayloadSize = 0, $message = "")
     {
+
         parent::__construct($message, 413);
         $this->setMaxPayloadSize($maxPayloadSize);
     }
 
     /**
+
      * @return integer representation of max payload size
      */
     public function getMaxPayloadSize()
@@ -62,6 +65,7 @@ class PayloadTooLargeException extends ClientErrorException
     }
 
     /**
+
      * @param integer $maxPayloadSize representation of max payload size
      * @return $this
      */

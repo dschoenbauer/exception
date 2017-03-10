@@ -68,4 +68,5 @@ class UnsupportedMediaType extends ClientErrorException
         $this->supportedMediaTypes = $supportedMediaTypes;
         return $this;
     }
+
 }
