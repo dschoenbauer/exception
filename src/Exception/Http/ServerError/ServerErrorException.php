@@ -30,7 +30,6 @@ use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\Http\HttpExceptionInterface;
 use DSchoenbauer\Exception\Platform\RuntimeException;
 
-
 /**
  * A base runtime application exception indicating a server error (HTTP 5xx status codes).
  *

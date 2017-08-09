@@ -29,16 +29,18 @@ namespace DSchoenbauer\Exception\Http\ServerError;
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
- * The server encountered an unexpected condition which prevented it from 
+ * The server encountered an unexpected condition which prevented it from
  * fulfilling the request.
  * @link https://httpstatuses.com/500 Source
  *
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class InternalServerErrorException extends ServerErrorException {
+class InternalServerErrorException extends ServerErrorException
+{
 
-    public function __construct($message = "") {
+    public function __construct($message = "")
+    {
         parent::__construct($message, 500);
     }
     

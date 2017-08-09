@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,16 +22,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
- * The origin server is refusing to service the request because the payload is 
+ * The origin server is refusing to service the request because the payload is
  * in a format not supported by this method on the target resource.
- * 
- * The format problem might be due to the requests indicated Content-Type or 
+ *
+ * The format problem might be due to the requests indicated Content-Type or
  * Content-Encoding, or as a result of inspecting the data directly.
  *
  * @link https://httpstatuses.com/415 Source
@@ -44,29 +42,31 @@ class UnsupportedMediaTypeException extends ClientErrorException {
     private $_supportedMediaTypes = [];
     
     /**
-     * @param mixed $supportedMediaTypes a list of supported media types to give 
+     * @param mixed $supportedMediaTypes a list of supported media types to give
      * the client a clue as to what is expected
      * @param string $message a message from the offending section of code
      */
-    public function __construct($supportedMediaTypes = null, $message = "") {
+    public function __construct(array $supportedMediaTypes = [ ], $message = "")
+    {
         parent::__construct($message, 415);
         $this->setSupportedMediaTypes($supportedMediaTypes);
     }
- 
-    
+
     /**
      * @return mixed a list of supported media types
      */
-    public function getSupportedMediaTypes() {
-        return $this->_supportedMediaTypes;
+    public function getSupportedMediaTypes()
+    {
+        return $this->supportedMediaTypes;
     }
 
     /**
-     * @param mixed $supportedMediaTypes a list of media types supported
+     * @param array $supportedMediaTypes a list of media types supported
      * @return $this
      */
-    public function setSupportedMediaTypes($supportedMediaTypes) {
-        $this->_supportedMediaTypes = $supportedMediaTypes;
+    public function setSupportedMediaTypes(array $supportedMediaTypes)
+    {
+        $this->supportedMediaTypes = $supportedMediaTypes;
         return $this;
     }
 

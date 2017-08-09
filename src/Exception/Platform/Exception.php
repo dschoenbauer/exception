@@ -36,7 +36,8 @@ use Exception as Exc;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class Exception extends Exc implements ExceptionInterface {
+class Exception extends Exc implements ExceptionInterface
+{
     
     public function __construct($message = "", $code = 0, $previous = null)
     {

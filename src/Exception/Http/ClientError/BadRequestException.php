@@ -27,8 +27,8 @@ namespace DSchoenbauer\Exception\Http\ClientError;
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
- * The server cannot or will not process the request due to something that is 
- * perceived to be a client error (e.g., malformed request syntax, invalid 
+ * The server cannot or will not process the request due to something that is
+ * perceived to be a client error (e.g., malformed request syntax, invalid
  * request message framing, or deceptive request routing).
  * @link https://httpstatuses.com/400 Source
  * @author David Schoenbauer <dschoenbauer@gmail.com>

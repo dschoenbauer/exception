@@ -30,9 +30,10 @@ namespace DSchoenbauer\Exception\Enum;
  * A group of constants that house their default messages
  * Tips for a good error message:
  * 1. Be specific to the user’s task. Provide guidance.
- * 2. Let users know you’re human.
- * 3. Embrace humor in the situation. Keep it polite, and light hearted.
+ * 2. No one ever died of humility. Remember that we (the service) are human too.
+ * 3. Embrace humor in the situation. Keep it polite, and light hearted. Cute is great but informative is better
  * 4. Don’t make users work for it. Provide help and hints to getting the issues resolved.
+ * 5. Error messaging is customer support.
  * 
  * @author David Schoenbauer
  */
