@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The server understands the content type of the request entity (hence a 
  * 415 Unsupported Media Type status code is inappropriate), and the syntax of 
@@ -46,4 +48,8 @@ class UnprocessableEntityException extends ClientErrorException {
         parent::__construct($message, 422);
     }
 
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNPROCESSABLE_ENTITY_EXCEPTION;
+    }
 }

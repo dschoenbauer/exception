@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,9 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\Http\HttpExceptionInterface;
 use DSchoenbauer\Exception\Platform\RuntimeException;
 
@@ -35,5 +34,10 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class ClientErrorException extends RuntimeException implements HttpExceptionInterface {
+class ClientErrorException extends RuntimeException implements HttpExceptionInterface
+{
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::CLIENT_ERROR_EXCEPTION;
+    }
 }

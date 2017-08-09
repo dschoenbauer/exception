@@ -44,5 +44,14 @@ class AbstractPlatformException extends \PHPUnit_Framework_TestCase {
         $this->commonInterface = $commonInterface;
         return $this;
     }
+    
+        
+    public function testDefaultMessgae(){
+        $class = basename(get_class($this->object));
+        $newName = strtoupper(preg_replace('/([a-z])([A-Z])/', '$1_$2', $class));
+        $message = constant("DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::" . $newName);
+        $this->assertEquals($message, $this->object->getDefaultMessage());
+        $this->assertEquals($message, $this->object->getMessage());
+    }
 
 }

@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * Intended to be used when resource access is denied for legal reasons, e.g. 
  * censorship or government-mandated blocked access. A reference to the 1953 
@@ -53,4 +55,8 @@ class UnavailableForLegalReasonsException extends ClientErrorException {
         parent::__construct($message, 451);
     }
 
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNAVAILABLE_FOR_LEGAL_REASONS_EXCEPTION;
+    }
 }

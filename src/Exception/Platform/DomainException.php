@@ -26,8 +26,9 @@
 
 namespace DSchoenbauer\Exception\Platform;
 
-use DSchoenbauer\Exception\ExceptionInterface;
 use DomainException as Domain;
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+use DSchoenbauer\Exception\ExceptionInterface;
 
 /**
  * Domain means data domain here. That is a DomainException shall be through whenever a value does not adhere to a defined valid data domain. Examples:
@@ -40,4 +41,16 @@ use DomainException as Domain;
  */
 class DomainException extends Domain implements ExceptionInterface {
     
+    public function __construct($message = "", $code = 0, $previous = null)
+    {
+        if($message === ""){
+            $message = $this->getDefaultMessage();
+        }
+        parent::__construct($message, $code, $previous);
+    }
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::DOMAIN_EXCEPTION;
+    }
 }

@@ -47,5 +47,10 @@ class NotFoundException extends ClientErrorException {
     public function __construct($message = "") {
         parent::__construct($message, 404);
     }
+    
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::NOT_FOUND_EXCEPTION;
+    }
 
 }

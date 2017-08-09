@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Platform;
 
 use BadFunctionCallException as BadFunctionCall;
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\ExceptionInterface;
 
 /**
@@ -35,6 +34,19 @@ use DSchoenbauer\Exception\ExceptionInterface;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class BadFunctionCallException extends BadFunctionCall implements ExceptionInterface {
+class BadFunctionCallException extends BadFunctionCall implements ExceptionInterface
+{
+
+    public function __construct($message = "", $code = 0, $previous = null)
+    {
+        if($message === ""){
+            $message = $this->getDefaultMessage();
+        }
+        parent::__construct($message, $code, $previous);
+    }
     
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::BAD_FUNCTION_CALL_EXCEPTION;
+    }
 }

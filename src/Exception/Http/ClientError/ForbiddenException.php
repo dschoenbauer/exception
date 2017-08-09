@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The server understood the request but refuses to authorize it.
  * 
@@ -51,4 +53,8 @@ class ForbiddenException extends ClientErrorException {
         parent::__construct($message, 403);
     }
 
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::FORBIDDEN_EXCEPTION;
+    }
 }

@@ -26,8 +26,9 @@
 
 namespace DSchoenbauer\Exception\Platform;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\ExceptionInterface;
-use UnexpectedValueException as UnexpectedValue;
+use \UnexpectedValueException as UnexpectedValue;
 
 /**
  * Exception thrown if a value does not match with a set of values. 
@@ -40,4 +41,16 @@ use UnexpectedValueException as UnexpectedValue;
  */
 class UnexpectedValueException extends UnexpectedValue implements ExceptionInterface {
     
+    public function __construct($message = "", $code = 0, $previous = null)
+    {
+        if($message === ""){
+            $message = $this->getDefaultMessage();
+        }
+        parent::__construct($message, $code, $previous);
+    }
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNEXPECTED_VALUE_EXCEPTION;
+    }
 }

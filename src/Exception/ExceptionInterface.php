@@ -34,5 +34,5 @@ namespace DSchoenbauer\Exception;
  * @since 1.0.0
  */
 interface ExceptionInterface {
-    
+    public function getDefaultMessage();
 }

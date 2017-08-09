@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The request could not be completed due to a conflict with the current state 
  * of the target resource. This code is used in situations where the user might 
@@ -50,6 +52,11 @@ class ConflictException extends ClientErrorException {
 
     public function __construct($reasonForError = "") {
         parent::__construct($reasonForError, 409);
+    }
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::CONFLICT_EXCEPTION;
     }
 
 }

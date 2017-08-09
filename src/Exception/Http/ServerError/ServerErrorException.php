@@ -26,6 +26,7 @@
 
 namespace DSchoenbauer\Exception\Http\ServerError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\Http\HttpExceptionInterface;
 use DSchoenbauer\Exception\Platform\RuntimeException;
 
@@ -37,4 +38,8 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  * @since 1.0.0
  */
 class ServerErrorException extends RuntimeException implements HttpExceptionInterface {
+     public function getDefaultMessage()
+     {
+         return ExceptionDefaultMessages::SERVER_ERROR_EXCEPTION;
+     }
 }

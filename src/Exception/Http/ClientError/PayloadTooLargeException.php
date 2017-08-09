@@ -52,6 +52,11 @@ class PayloadTooLargeException extends ClientErrorException {
         parent::__construct($message, 413);
         $this->setMaxPayloadSize($maxPayloadSize);
     }
+    
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::PAYLOAD_TOO_LARGE_EXCEPTION;
+    }
 
     /**
      * @return mixed representation of max payload size

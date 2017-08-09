@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ServerError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The server is currently unable to handle the request due to a temporary 
  * overload or scheduled maintenance, which will likely be alleviated after 
@@ -46,5 +48,10 @@ namespace DSchoenbauer\Exception\Http\ServerError;
 class ServiceUnavailableException extends ServerErrorException {
     public function __construct($message = "") {
         parent::__construct($message, 503);
+    }
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::SERVICE_UNAVAILABLE_EXCEPTION;
     }
 }

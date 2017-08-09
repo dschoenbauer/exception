@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ServerError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The server encountered an unexpected condition which prevented it from 
  * fulfilling the request.
@@ -39,5 +41,9 @@ class InternalServerErrorException extends ServerErrorException {
     public function __construct($message = "") {
         parent::__construct($message, 500);
     }
-
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::INTERNAL_SERVER_ERROR_EXCEPTION;
+    }
 }

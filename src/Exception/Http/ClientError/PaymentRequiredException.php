@@ -40,4 +40,8 @@ class PaymentRequiredException extends ClientErrorException {
         parent::__construct($message, 402);
     }
 
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::PAYMENT_REQUIRED_EXCEPTION;
+    }
 }

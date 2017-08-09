@@ -26,6 +26,8 @@
 
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The request has not been applied because it lacks valid authentication 
  * credentials for the target resource.
@@ -49,6 +51,11 @@ class UnauthorizedException extends ClientErrorException{
 
     public function __construct($message = "") {
         parent::__construct($message, 401);
+    }
+    
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNAUTHORIZED_EXCEPTION;
     }
 
 }
