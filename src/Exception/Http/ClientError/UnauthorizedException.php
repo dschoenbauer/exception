@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
@@ -54,10 +52,9 @@ class UnauthorizedException extends ClientErrorException
     {
         parent::__construct($message, 401);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::UNAUTHORIZED_EXCEPTION;
     }
-
 }

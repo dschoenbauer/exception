@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception;
 
 /**
@@ -33,6 +31,8 @@ namespace DSchoenbauer\Exception;
  * @author David Schoenbauer <DSchoenbauer@gmail.com>
  * @since 1.0.0
  */
-interface ExceptionInterface {
+interface ExceptionInterface
+{
+
     public function getDefaultMessage();
 }

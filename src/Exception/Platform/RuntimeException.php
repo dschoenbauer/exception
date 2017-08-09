@@ -39,12 +39,12 @@ class RuntimeException extends Runtime implements ExceptionInterface
 
     public function __construct($message = "", $code = 0, $previous = null)
     {
-        if($message === ""){
+        if ($message === "") {
             $message = $this->getDefaultMessage();
         }
         parent::__construct($message, $code, $previous);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::RUNTIME_EXCEPTION;

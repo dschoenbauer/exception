@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Enum;
 
 /**
@@ -39,6 +37,7 @@ namespace DSchoenbauer\Exception\Enum;
  */
 class ExceptionDefaultMessages
 {
+
 //Client Error Exceptions
     const CLIENT_ERROR_EXCEPTION = "An error has occured. Please modify content and resubmit your request.";
     const BAD_REQUEST_EXCEPTION = "Your browser sent a request that this server could not understand.";

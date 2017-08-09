@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
@@ -55,10 +53,9 @@ class ConflictException extends ClientErrorException
     {
         parent::__construct($reasonForError, 409);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::CONFLICT_EXCEPTION;
     }
-
 }

@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ServerError;
 
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
@@ -36,9 +34,11 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class ServerErrorException extends RuntimeException implements HttpExceptionInterface {
-     public function getDefaultMessage()
-     {
-         return ExceptionDefaultMessages::SERVER_ERROR_EXCEPTION;
-     }
+class ServerErrorException extends RuntimeException implements HttpExceptionInterface
+{
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::SERVER_ERROR_EXCEPTION;
+    }
 }

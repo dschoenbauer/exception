@@ -36,6 +36,7 @@ use DSchoenbauer\Exception\Platform\RuntimeException;
  */
 class ClientErrorException extends RuntimeException implements HttpExceptionInterface
 {
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::CLIENT_ERROR_EXCEPTION;

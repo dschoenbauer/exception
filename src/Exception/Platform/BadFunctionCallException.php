@@ -39,12 +39,12 @@ class BadFunctionCallException extends BadFunctionCall implements ExceptionInter
 
     public function __construct($message = "", $code = 0, $previous = null)
     {
-        if($message === ""){
+        if ($message === "") {
             $message = $this->getDefaultMessage();
         }
         parent::__construct($message, $code, $previous);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::BAD_FUNCTION_CALL_EXCEPTION;

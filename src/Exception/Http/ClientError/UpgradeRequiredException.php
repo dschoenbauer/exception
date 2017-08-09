@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
@@ -49,6 +47,7 @@ class UpgradeRequiredException extends ClientErrorException
 
     public function getDefaultMessage()
     {
-        return ExceptionDefaultMessages::UPGRADE_REQUIRED_EXCEPTION;;
+        return ExceptionDefaultMessages::UPGRADE_REQUIRED_EXCEPTION;
+        ;
     }
 }

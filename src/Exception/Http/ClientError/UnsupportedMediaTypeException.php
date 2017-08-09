@@ -37,16 +37,17 @@ use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class UnsupportedMediaTypeException extends ClientErrorException {
-    
+class UnsupportedMediaTypeException extends ClientErrorException
+{
+
     private $_supportedMediaTypes = [];
-    
+
     /**
      * @param mixed $supportedMediaTypes a list of supported media types to give
      * the client a clue as to what is expected
      * @param string $message a message from the offending section of code
      */
-    public function __construct(array $supportedMediaTypes = [ ], $message = "")
+    public function __construct(array $supportedMediaTypes = [], $message = "")
     {
         parent::__construct($message, 415);
         $this->setSupportedMediaTypes($supportedMediaTypes);
@@ -74,5 +75,4 @@ class UnsupportedMediaTypeException extends ClientErrorException {
     {
         return ExceptionDefaultMessages::UNSUPPORTED_MEDIA_TYPE_EXCEPTION;
     }
-
 }

@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Platform;
 
 use DomainException as Domain;
@@ -42,15 +40,15 @@ use DSchoenbauer\Exception\ExceptionInterface;
  */
 class DomainException extends Domain implements ExceptionInterface
 {
-    
+
     public function __construct($message = "", $code = 0, $previous = null)
     {
-        if($message === ""){
+        if ($message === "") {
             $message = $this->getDefaultMessage();
         }
         parent::__construct($message, $code, $previous);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::DOMAIN_EXCEPTION;

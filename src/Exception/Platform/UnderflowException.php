@@ -1,6 +1,4 @@
 <?php
-
-
 /*
  * The MIT License
  *
@@ -39,15 +37,15 @@ use UnderflowException as UnderFlow;
  */
 class UnderflowException extends Underflow implements ExceptionInterface
 {
-    
+
     public function __construct($message = "", $code = 0, $previous = null)
     {
-        if($message === ""){
+        if ($message === "") {
             $message = $this->getDefaultMessage();
         }
         parent::__construct($message, $code, $previous);
     }
-    
+
     public function getDefaultMessage()
     {
         return ExceptionDefaultMessages::UNDERFLOW_EXCEPTION;
