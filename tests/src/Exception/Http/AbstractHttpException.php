@@ -23,6 +23,14 @@ class AbstractHttpException extends AbstractPlatformException{
     public function testErrorNumber(){
         $this->assertEquals($this->getErrorNumber(),$this->object->getCode());
     }
+    
+    public function testDefaultMessgae(){
+        $class = basename(str_replace("\\", DIRECTORY_SEPARATOR, get_class($this->object)));
+        $newName = strtoupper(preg_replace('/([a-z])([A-Z])/', '$1_$2', $class));
+        $message = constant("DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::" . $newName);
+        $this->assertEquals($message, $this->object->getDefaultMessage());
+        $this->assertEquals($message, $this->object->getMessage());
+    }
 
     public function getErrorNumber() {
         return $this->errorNumber;

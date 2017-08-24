@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The server understood the request but refuses to authorize it.
@@ -51,5 +51,10 @@ class ForbiddenException extends ClientErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 403);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::FORBIDDEN_EXCEPTION;
     }
 }

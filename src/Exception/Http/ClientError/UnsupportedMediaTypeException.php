@@ -24,6 +24,8 @@
  */
 namespace DSchoenbauer\Exception\Http\ClientError;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
+
 /**
  * The origin server is refusing to service the request because the payload is
  * in a format not supported by this method on the target resource.
@@ -35,17 +37,17 @@ namespace DSchoenbauer\Exception\Http\ClientError;
  * @author David Schoenbauer <dschoenbauer@gmail.com>
  * @since 1.0.0
  */
-class UnsupportedMediaType extends ClientErrorException
+class UnsupportedMediaTypeException extends ClientErrorException
 {
 
-    private $supportedMediaTypes = [ ];
+    private $_supportedMediaTypes = [];
 
     /**
      * @param mixed $supportedMediaTypes a list of supported media types to give
      * the client a clue as to what is expected
      * @param string $message a message from the offending section of code
      */
-    public function __construct(array $supportedMediaTypes = [ ], $message = "")
+    public function __construct(array $supportedMediaTypes = [], $message = "")
     {
         parent::__construct($message, 415);
         $this->setSupportedMediaTypes($supportedMediaTypes);
@@ -69,4 +71,8 @@ class UnsupportedMediaType extends ClientErrorException
         return $this;
     }
 
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNSUPPORTED_MEDIA_TYPE_EXCEPTION;
+    }
 }

@@ -1,6 +1,4 @@
 <?php
-
-
 /*
  * The MIT License
  *
@@ -24,8 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
@@ -48,5 +44,10 @@ class NotAllowedException extends ClientErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 405);
+    }
+
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::NOT_ALLOWED_EXCEPTION;
     }
 }

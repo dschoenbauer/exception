@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * Intended to be used when resource access is denied for legal reasons, e.g.
@@ -53,5 +53,10 @@ class UnavailableForLegalReasonsException extends ClientErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 451);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNAVAILABLE_FOR_LEGAL_REASONS_EXCEPTION;
     }
 }

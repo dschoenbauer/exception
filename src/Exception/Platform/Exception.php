@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,9 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Platform;
 
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 use DSchoenbauer\Exception\ExceptionInterface;
 use Exception as Exc;
 
@@ -37,5 +36,17 @@ use Exception as Exc;
  */
 class Exception extends Exc implements ExceptionInterface
 {
-    
+
+    public function __construct($message = "", $code = 0, $previous = null)
+    {
+        if ($message === "") {
+            $message = $this->getDefaultMessage();
+        }
+        parent::__construct($message, $code, $previous);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::EXCEPTION;
+    }
 }

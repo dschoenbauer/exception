@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ServerError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The server is currently unable to handle the request due to a temporary
@@ -45,8 +45,14 @@ namespace DSchoenbauer\Exception\Http\ServerError;
  */
 class ServiceUnavailableException extends ServerErrorException
 {
+
     public function __construct($message = "")
     {
         parent::__construct($message, 503);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::SERVICE_UNAVAILABLE_EXCEPTION;
     }
 }

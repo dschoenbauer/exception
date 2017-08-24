@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The request could not be completed due to a conflict with the current state
@@ -52,5 +52,10 @@ class ConflictException extends ClientErrorException
     public function __construct($reasonForError = "")
     {
         parent::__construct($reasonForError, 409);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::CONFLICT_EXCEPTION;
     }
 }

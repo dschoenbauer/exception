@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
@@ -46,13 +44,16 @@ class PayloadTooLargeException extends ClientErrorException
 
     private $maxPayloadSize = 0;
 
-
-
     public function __construct($maxPayloadSize = 0, $message = "")
     {
 
         parent::__construct($message, 413);
         $this->setMaxPayloadSize($maxPayloadSize);
+    }
+
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::PAYLOAD_TOO_LARGE_EXCEPTION;
     }
 
     /**
