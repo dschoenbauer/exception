@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The server understands the content type of the request entity (hence a
@@ -46,5 +46,10 @@ class UnprocessableEntityException extends ClientErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 422);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::UNPROCESSABLE_ENTITY_EXCEPTION;
     }
 }

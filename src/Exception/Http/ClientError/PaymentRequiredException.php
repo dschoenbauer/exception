@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,7 +22,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
 
 /**
@@ -39,5 +37,10 @@ class PaymentRequiredException extends ClientErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 402);
+    }
+
+    public function getDefaultMessage()
+    {
+        return \DSchoenbauer\Exception\Enum\ExceptionDefaultMessages::PAYMENT_REQUIRED_EXCEPTION;
     }
 }

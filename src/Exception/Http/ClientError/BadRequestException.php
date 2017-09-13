@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ClientError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The server cannot or will not process the request due to something that is
@@ -37,8 +37,16 @@ namespace DSchoenbauer\Exception\Http\ClientError;
 class BadRequestException extends ClientErrorException
 {
 
-    public function __construct($message = "")
+    public function __construct($message = null)
     {
+        if (!$message) {
+            $message = $this->getDefaultMessage();
+        }
         parent::__construct($message, 400);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::BAD_REQUEST_EXCEPTION;
     }
 }

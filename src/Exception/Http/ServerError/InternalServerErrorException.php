@@ -1,5 +1,4 @@
 <?php
-
 /*
  * The MIT License
  *
@@ -23,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 namespace DSchoenbauer\Exception\Http\ServerError;
+
+use DSchoenbauer\Exception\Enum\ExceptionDefaultMessages;
 
 /**
  * The server encountered an unexpected condition which prevented it from
@@ -40,5 +40,10 @@ class InternalServerErrorException extends ServerErrorException
     public function __construct($message = "")
     {
         parent::__construct($message, 500);
+    }
+
+    public function getDefaultMessage()
+    {
+        return ExceptionDefaultMessages::INTERNAL_SERVER_ERROR_EXCEPTION;
     }
 }
